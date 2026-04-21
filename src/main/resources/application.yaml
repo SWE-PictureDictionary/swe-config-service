@@ -6,11 +6,10 @@ spring:
     name: config-service
 
   profiles:
-    active: git
+    active: native
 
   cloud:
     config:
       server:
-        git:
-          uri: https://github.com/SWE-PictureDictionary/swe-config-repo
-          default-label: main
+        native:
+          search-locations: file:/config-repo
